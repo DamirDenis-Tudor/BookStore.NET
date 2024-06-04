@@ -120,7 +120,11 @@ internal class UserRepository(DatabaseContext dbContext) : IUserRepository
     {
         var users = new List<UserInfoDto>();
         dbContext.Users.Include(user => user.BillDetails).ToList()
-            .ForEach(u => users.Add(MapperDto.MapToBillUserDto(u)!));
+            .ForEach(u =>
+            {
+                dbContext.Entry(u).Reload();
+                users.Add(MapperDto.MapToBillUserDto(u)!);
+            });
 
         return users.Count != 0
             ? Result<List<UserInfoDto>, DaoErrorType>.Success(users, "Users list returned.")

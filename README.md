@@ -46,7 +46,12 @@
 
 ## 3. Video Demo
 
-https://github.com/DamirDenis-Tudor/BookStore.NET/assets/20514478/7cc27e93-30f5-4265-a832-2a8c33ec9a5f
+https://github.com/DamirDenis-Tudor/BookStore.NET/assets/20514478/7cc27e93-30f5-4265-a832-2a8c33ec9a5f 
+
+----
+
+https://github.com/DamirDenis-Tudor/BookStore.NET/assets/101417927/669854b9-83ca-4349-9e4b-8dfc03d83784
+
 
 ## 4. Architecture
 

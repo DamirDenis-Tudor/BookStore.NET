@@ -71,12 +71,14 @@ public partial class ProductUpdate
         /// The price of the product
         /// </summary>
         [Required(ErrorMessage = "Completeaza campul \"Pret\"")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "Invalid price.")]
         public decimal Price { get; set; } = 1;
 
         /// <summary>
         /// The quantity of the product
         /// </summary>
         [Required(ErrorMessage = "Completeaza campul \"Cantitate\"")]
+        [Range(0, int.MaxValue, ErrorMessage = "Invalid Quantity")]
         public int Quantity { get; set; } = 1;
 
         /// <summary>
